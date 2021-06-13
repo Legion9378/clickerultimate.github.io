@@ -1,8 +1,8 @@
 function newGame() {
     var initData = {
         global: {
-            version: "0.2.06",
-            latestChanges: "Leaders now advise you on which advancements to get. Fancy graphics mode has been improved.",
+            version: "0.2.06.001",
+            latestChanges: "Ressource gain and WorkerProgress slightly changed.",
             start: new Date().getTime(),
             time: 0,
             speed: 10,
@@ -54,7 +54,7 @@ function newGame() {
             gold: 0,
             nextGoldRate: 0,
             taxPassiveGold: 0,
-            maxTax: 100,
+            maxTax: 200,
             prestigePoints: 0,
             nextPrestigePoints: 0,
             achievementPoints: 0,
@@ -262,13 +262,13 @@ function newGame() {
                 free: 0,
                 resourceGain: {
                     waterP: {
-                        base: 0.1
+                        base: 0.3
                     }
                 },
                 resourceCost: {
                     water: {
                         base: 1,
-                        rate: 1.25
+                        rate: 1.11
                     }
                 },
                 effect: function () { achieve("achThirsty"); },
@@ -282,17 +282,17 @@ function newGame() {
                 free: 0,
                 resourceGain: {
                     woodP: {
-                        base: 0.2
+                        base: 0.6
                     }
                 },
                 resourceCost: {
                     water: {
-                        base: 3,
-                        rate: 1.35
+                        base: 2,
+                        rate: 1.17
                     },
                     wood: {
-                        base: 1,
-                        rate: 1.35
+                        base: 3,
+                        rate: 1.17
                     }
                 },
                 locked: true
@@ -314,7 +314,7 @@ function newGame() {
                 free: 0,
                 resourceGain: {
                     stoneP: {
-                        base: 0.4
+                        base: 0.6
                     },
                     water: {
                         base: -0.1
@@ -341,16 +341,16 @@ function newGame() {
                 free: 0,
                 resourceGain: {
                     ironP: {
-                        base: 5
+                        base: 8
                     }
                 },
                 resourceCost: {
                     water: {
-                        base: 200,
+                        base: 100,
                         rate: 1.35
                     },
                     iron: {
-                        base: 10,
+                        base: 5,
                         rate: 1.25
                     }
                 },
@@ -365,10 +365,10 @@ function newGame() {
                 free: 0,
                 resourceGain: {
                     water: {
-                        base: -0.2
+                        base: -0.1
                     },
                     wheatP: {
-                        base: 0.1
+                        base: 0.3
                     }
                 },
                 resourceCost: {
@@ -392,13 +392,13 @@ function newGame() {
                 free: 0,
                 resourceGain: {
                     stone: {
-                        base: -0.2
+                        base: -0.1
                     },
                     wheat: {
-                        base: -0.2
+                        base: -0.1
                     },
                     silverP: {
-                        base: 1
+                        base: 3
                     }
                 },
                 resourceCost: {
@@ -425,13 +425,13 @@ function newGame() {
                 free: 0,
                 resourceGain: {
                     waterP: {
-                        base: 0.4
+                        base: 0.8
                     },
                     woodP: {
-                        base: -0.2
+                        base: -0.1
                     },
                     wheatP: {
-                        base: 0.2
+                        base: 0.4
                     }
                 },
                 resourceCost: {
@@ -450,13 +450,13 @@ function newGame() {
                 free: 0,
                 resourceGain: {
                     woodP: {
-                        base: 0.2
+                        base: 0.8
                     },
                     stoneP: {
-                        base: 0.1
+                        base: 0.4
                     },
                     wheatP: {
-                        base: -0.3
+                        base: -0.1
                     }
                 },
                 resourceCost: {
@@ -475,10 +475,10 @@ function newGame() {
                 free: 0,
                 resourceGain: {
                     waterP: {
-                        base: -0.2
+                        base: -0.1
                     },
                     wheatP: {
-                        base: 0.1
+                        base: 0.3
                     }
                 },
                 resourceCost: {
@@ -497,13 +497,13 @@ function newGame() {
                 free: 0,
                 resourceGain: {
                     stoneP: {
-                        base: -0.2
+                        base: -0.1
                     },
                     ironP: {
-                        base: -1
+                        base: -0.4
                     },
                     silverP: {
-                        base: 0.2
+                        base: 0.9
                     }
                 },
                 resourceCost: {
@@ -522,10 +522,10 @@ function newGame() {
                 free: 0,
                 resourceGain: {
                     water: {
-                        base: 0.1
+                        base: 0.6
                     },
                     stoneP: {
-                        base: 2
+                        base: 1
                     }
                 },
                 resourceCost: {
@@ -559,7 +559,7 @@ function newGame() {
                 free: 0,
                 resourceGain: {
                     water: {
-                        base: 0.3
+                        base: 1.9
                     }
                 },
                 resourceCost: {
@@ -592,7 +592,7 @@ function newGame() {
                         base: -0.2
                     },
                     wood: {
-                        base: 0.3
+                        base: 0.9
                     }
                 },
                 resourceCost: {
@@ -622,13 +622,13 @@ function newGame() {
                 free: 0,
                 resourceGain: {
                     water: {
-                        base: -0.5
+                        base: -0.4
                     },
                     wood: {
                         base: -0.2
                     },
                     stone: {
-                        base: 0.3
+                        base: 0.9
                     }
                 },
                 resourceCost: {
@@ -662,10 +662,10 @@ function newGame() {
                 free: 0,
                 resourceGain: {
                     stone: {
-                        base: -0.5
+                        base: -0.4
                     },
                     iron: {
-                        base: 0.1
+                        base: 0.9
                     }
                 },
                 resourceCost: {
@@ -692,10 +692,10 @@ function newGame() {
                 free: 0,
                 resourceGain: {
                     wood: {
-                        base: -0.3
+                        base: -0.2
                     },
                     wheat: {
-                        base: 0.4
+                        base: 1.8
                     }
                 },
                 resourceCost: {
@@ -725,10 +725,10 @@ function newGame() {
                 free: 0,
                 resourceGain: {
                     iron: {
-                        base: -1
+                        base: -0.4
                     },
                     silver: {
-                        base: 0.1
+                        base: 0.7
                     }
                 },
                 resourceCost: {
@@ -761,13 +761,13 @@ function newGame() {
                 free: 0,
                 resourceGain: {
                     iron: {
-                        base: -0.5
+                        base: -0.3
                     },
                     silver: {
-                        base: -0.5
+                        base: -0.3
                     },
                     diamond: {
-                        base: 0.1
+                        base: 0.3
                     }
                 },
                 resourceCost: {
@@ -797,25 +797,25 @@ function newGame() {
                         base: -0.3
                     },
                     water: {
-                        base: 0.1
+                        base: 0.9
                     },
                     woodP: {
                         base: -0.3
                     },
                     wood: {
-                        base: 0.1
+                        base: 0.9
                     },
                     stoneP: {
                         base: -0.3
                     },
                     stone: {
-                        base: 0.1
+                        base: 0.9
                     },
                     wheatP: {
                         base: -0.3
                     },
                     wheat: {
-                        base: 0.1
+                        base: 0.9
                     }
                 },
                 resourceCost: {
@@ -843,9 +843,9 @@ function newGame() {
             trdWater2: {
                 name: "trdWater2",
                 label: "Wood to Water",
-                description: function () { return "Trade <b>1000 Wood</b> in exchange for <b>100 Water</b>."; },
+                description: function () { return "Trade <b>1000 Wood</b> in exchange for <b>500 Water</b>."; },
                 current: 0,
-                rate: 100,
+                rate: 500,
                 resourceCost: {
                     wood: {
                         base: 1000
@@ -857,9 +857,9 @@ function newGame() {
             trdWater: {
                 name: "trdWater",
                 label: "Wheat to Water",
-                description: function () { return "Trade <b>1000 Wheat</b> in exchange for <b>100 Water</b>."; },
+                description: function () { return "Trade <b>1000 Wheat</b> in exchange for <b>500 Water</b>."; },
                 current: 0,
-                rate: 100,
+                rate: 500,
                 resourceCost: {
                     wheat: {
                         base: 1000
@@ -871,9 +871,9 @@ function newGame() {
             trdWood: {
                 name: "trdWood",
                 label: "Water to Wood",
-                description: function () { return "Trade <b>1000 Water</b> in exchange for <b>100 Wood</b>."; },
+                description: function () { return "Trade <b>1000 Water</b> in exchange for <b>500 Wood</b>."; },
                 current: 0,
-                rate: 100,
+                rate: 500,
                 resourceCost: {
                     water: {
                         base: 1000
@@ -885,9 +885,9 @@ function newGame() {
             trdWood2: {
                 name: "trdWood2",
                 label: "Stone to Wood",
-                description: function () { return "Trade <b>1000 Stone</b> in exchange for <b>100 Wood</b>."; },
+                description: function () { return "Trade <b>1000 Stone</b> in exchange for <b>500 Wood</b>."; },
                 current: 0,
-                rate: 100,
+                rate: 500,
                 resourceCost: {
                     stone: {
                         base: 1000
@@ -899,9 +899,9 @@ function newGame() {
             trdStone2: {
                 name: "trdStone2",
                 label: "Water to Stone",
-                description: function () { return "Trade <b>1000 Water</b> in exchange for <b>100 Stone</b>."; },
+                description: function () { return "Trade <b>1000 Water</b> in exchange for <b>500 Stone</b>."; },
                 current: 0,
-                rate: 100,
+                rate: 500,
                 resourceCost: {
                     water: {
                         base: 1000
@@ -913,9 +913,9 @@ function newGame() {
             trdStone: {
                 name: "trdStone",
                 label: "Wood to Stone",
-                description: function () { return "Trade <b>1000 Wood</b> in exchange for <b>100 Stone</b>."; },
+                description: function () { return "Trade <b>1000 Wood</b> in exchange for <b>500 Stone</b>."; },
                 current: 0,
-                rate: 100,
+                rate: 500,
                 resourceCost: {
                     wood: {
                         base: 1000
@@ -927,9 +927,9 @@ function newGame() {
             trdIron2: {
                 name: "trdIron2",
                 label: "Wood to Iron",
-                description: function () { return "Trade <b>1000 Wood</b> in exchange for <b>100 Iron</b>."; },
+                description: function () { return "Trade <b>1000 Wood</b> in exchange for <b>500 Iron</b>."; },
                 current: 0,
-                rate: 100,
+                rate: 500,
                 resourceCost: {
                     wood: {
                         base: 1000
@@ -941,9 +941,9 @@ function newGame() {
             trdIron: {
                 name: "trdIron",
                 label: "Stone to Iron",
-                description: function () { return "Trade <b>1000 Stone</b> in exchange for <b>100 Iron</b>."; },
+                description: function () { return "Trade <b>1000 Stone</b> in exchange for <b>500 Iron</b>."; },
                 current: 0,
-                rate: 100,
+                rate: 500,
                 resourceCost: {
                     stone: {
                         base: 1000
@@ -955,9 +955,9 @@ function newGame() {
             trdSilver: {
                 name: "trdSilver",
                 label: "Iron to Silver",
-                description: function () { return "Trade <b>1000 Iron</b> in exchange for <b>100 Silver</b>."; },
+                description: function () { return "Trade <b>1000 Iron</b> in exchange for <b>500 Silver</b>."; },
                 current: 0,
-                rate: 100,
+                rate: 500,
                 resourceCost: {
                     iron: {
                         base: 1000
@@ -969,9 +969,9 @@ function newGame() {
             trdWheat: {
                 name: "trdWheat",
                 label: "Water to Wheat",
-                description: function () { return "Trade <b>1000 Water</b> in exchange for <b>100 Wheat</b>."; },
+                description: function () { return "Trade <b>1000 Water</b> in exchange for <b>500 Wheat</b>."; },
                 current: 0,
-                rate: 100,
+                rate: 500,
                 resourceCost: {
                     water: {
                         base: 1000
@@ -983,9 +983,9 @@ function newGame() {
             trdDiamond: {
                 name: "trdDiamond",
                 label: "Silver to Diamond",
-                description: function () { return "Trade <b>1000 Silver</b> in exchange for <b>100 Diamond</b>."; },
+                description: function () { return "Trade <b>1000 Silver</b> in exchange for <b>500 Diamond</b>."; },
                 current: 0,
-                rate: 100,
+                rate: 500,
                 resourceCost: {
                     silver: {
                         base: 1000
@@ -997,9 +997,9 @@ function newGame() {
             trdDiamond2: {
                 name: "trdDiamond2",
                 label: "Gold to Diamond",
-                description: function () { return "Trade <b>1000 Gold</b> in exchange for <b>100 Diamond</b>."; },
+                description: function () { return "Trade <b>1000 Gold</b> in exchange for <b>500 Diamond</b>."; },
                 current: 0,
-                rate: 100,
+                rate: 500,
                 resourceCost: {},
                 goldCost: 1000,
                 effect: function () { gainResource(getFromText("diamond"), this.rate, true); },
@@ -1008,9 +1008,9 @@ function newGame() {
             trdGold: {
                 name: "trdGold",
                 label: "Silver to Gold",
-                description: function () { return "Trade <b>1000 Silver</b> in exchange for <b>100 Gold</b>."; },
+                description: function () { return "Trade <b>1000 Silver</b> in exchange for <b>500 Gold</b>."; },
                 current: 0,
-                rate: 100,
+                rate: 500,
                 resourceCost: {
                     silver: {
                         base: 1000
@@ -1022,9 +1022,9 @@ function newGame() {
             trdGold2: {
                 name: "trdGold2",
                 label: "Diamond to Gold",
-                description: function () { return "Trade <b>1000 Diamond</b> in exchange for <b>100 Gold</b>."; },
+                description: function () { return "Trade <b>1000 Diamond</b> in exchange for <b>500 Gold</b>."; },
                 current: 0,
-                rate: 100,
+                rate: 500,
                 resourceCost: {
                     diamond: {
                         base: 1000
@@ -1041,7 +1041,7 @@ function newGame() {
                         + getAmountWorkers() + " Workers giving " + (getAmountWorkers() * this.rate) + " Gold<br />" + getAmountBuildings() + " Buildings costing " + Math.abs(getAmountBuildings() * this.maxRate) + " Gold<br />" + (game.player.taxPassiveGold > 0 ? "Taxman skill giving " + game.player.taxPassiveGold + " Gold<br />" : "")
                         + "Tax Ceiling: " + game.player.maxTax + " Gold<br />Tax Total: " + tax(this.rate, this.maxRate, false) + " Gold";
                 },
-                rate: 1,
+                rate: 3,
                 maxRate: -10,
                 current: 0,
                 resourceCost: {
@@ -1060,7 +1060,7 @@ function newGame() {
                         + getAmountBuildings() + " Buildings giving " + (getAmountBuildings() * this.rate) + " Gold<br />" + getAmountWorkers() + " Workers costing " + Math.abs(getAmountWorkers() * this.maxRate) + " Gold<br />" + (game.player.taxPassiveGold > 0 ? "Taxman skill giving " + game.player.taxPassiveGold + " Gold<br />" : "")
                         + "Tax Ceiling: " + game.player.maxTax + " Gold<br />Tax Total: " + tax(this.maxRate, this.rate, false) + " Gold";
                 },
-                rate: 5,
+                rate: 6,
                 maxRate: -2,
                 current: 0,
                 resourceCost: {
@@ -1077,10 +1077,10 @@ function newGame() {
                 description: function () {
                     return "Purchase an <b>Advancement Point</b>. Each point costs more <b>Gold</b> than the last.";
                 },
-                rate: 1,
+                rate: 2,
                 current: 0,
                 goldBase: 10,
-                goldRate: 10,
+                goldRate: 2,
                 resourceCost: {},
                 effect: function () { addAdvancementPoints(this.rate); achieve("achGlitters"); },
                 locked: true
@@ -1092,10 +1092,10 @@ function newGame() {
                 description: function () {
                     return "Purchase an <b>Advancement Point</b>. Each point costs more <b>Gold</b> than the last.";
                 },
-                rate: 1,
+                rate: 4,
                 current: 0,
                 goldBase: 100,
-                goldRate: 10,
+                goldRate: 2,
                 resourceCost: {},
                 effect: function () { addAdvancementPoints(this.rate); achieve("achGlitters"); },
                 locked: true
@@ -1107,8 +1107,8 @@ function newGame() {
                 label: "Gilgamesh",
                 fullLabel: "Gilgamesh of Sumeria",
                 quote: "Only the gods dwell forever in sunlight. As for man, his days are numbered, whatever he may do, it is but wind.",
-                description: function () { return "A man with aspirations to great exploits ought prepare himself for the road ahead. <b>Gilgamesh</b> will lend his remarkable strength to you, increasing your <b>Base Clicking Power</b> by <b>20%</b>."; },
-                rate: 0.2,
+                description: function () { return "A man with aspirations to great exploits ought prepare himself for the road ahead. <b>Gilgamesh</b> will lend his remarkable strength to you, increasing your <b>Base Clicking Power</b> by <b>40%</b>."; },
+                rate: 0.4,
                 resourceCost: {
                     water: {
                         current: 5
@@ -1126,8 +1126,8 @@ function newGame() {
                 label: "Nebuchadnezzar",
                 fullLabel: "Nebuchadnezzar II, King of Babylon",
                 quote: "May the house that I have built endure forever, may I be satiated with its splendor, attain old age therein, with abundant offspring, and receive therein tribute of the kings of all regions, from all mankind.",
-                description: function () { return "Peace and prosperity shall come to men with the fortitude to harvest it from within. <b>Nebuchadnezzar</b>  can advise you in the ways to rule empires, so that your <b>Buildings</b> have their cost reduced by <b>5%</b>. He will also grant you a passive gain of <b>+1 Stone per second</b>."; },
-                rate: -0.05,
+                description: function () { return "Peace and prosperity shall come to men with the fortitude to harvest it from within. <b>Nebuchadnezzar</b>  can advise you in the ways to rule empires, so that your <b>Buildings</b> have their cost reduced by <b>15%</b>. He will also grant you a passive gain of <b>+1 Stone per second</b>."; },
+                rate: -0.15,
                 resourceCost: {
                     wood: {
                         current: 5
@@ -1147,7 +1147,7 @@ function newGame() {
                 fullLabel: "Pythagoras of Samos",
                 quote: "Sobriety is the strength of the soul, for it preserves its reason unclouded by passion.",
                 description: function () { return "In exchange for a minor toll, <b>Pythagoras</b> will develop a mathematical theorem for you, which will grant you <b>" + this.rate + " Advancement Point</b>."; },
-                rate: 1,
+                rate: 2,
                 resourceCost: {
                     water: {
                         current: 15
@@ -1175,8 +1175,8 @@ function newGame() {
                 label: "Leonidas",
                 fullLabel: "Leonidas I",
                 quote: "Come and take them.",
-                description: function () { return "Through strength and great valor, <b>Leonidas</b> will provide a increase your <b>Base Click Power</b> by <b>35%</b>, thusly bolstering your might greatly."; },
-                rate: 0.35,
+                description: function () { return "Through strength and great valor, <b>Leonidas</b> will provide a increase your <b>Base Click Power</b> by <b>70%</b>, thusly bolstering your might greatly."; },
+                rate: 0.7,
                 resourceCost: {
                     water: {
                         current: 80
@@ -1261,8 +1261,8 @@ function newGame() {
                 label: "Cicero",
                 fullLabel: "Marcus Tullius Cicero",
                 quote: "Knowledge which is divorced from justice, may be called cunning rather than wisdom.",
-                description: function () { return "Should you choose to seek counsel with <b>Cicero</b>, he will offer his services to you, hereby appeasing your population even in stressing times. Your <b>Workers</b> and <b>Upgrades</b> will receive a cost reduction of <b>5%</b>."; },
-                rate: -0.05,
+                description: function () { return "Should you choose to seek counsel with <b>Cicero</b>, he will offer his services to you, hereby appeasing your population even in stressing times. Your <b>Workers</b> and <b>Upgrades</b> will receive a cost reduction of <b>50%</b>."; },
+                rate: -0.5,
                 resourceCost: {
                     stone: {
                         current: 120
@@ -1395,8 +1395,8 @@ function newGame() {
                 label: "John Hancock",
                 quote: "People who pay greater respect to a wealthy villain than to an honest, upright man in poverty, almost deserve to be enslaved; they plainly show that wealth, however it may be acquired, is, in their esteem, to be preferred to virtue.",
                 description: function () { return "For a small fee, <b>John Hancock</b> will provide you with <b>" + this.rate + " Water Fetchers</b> to put to work at your leisure."; },
-                rate: 50,
-                goldCost: 1000,
+                rate: 1000,
+                goldCost: 500,
                 resourceCost: {},
                 effect: function () { buyWorker(getFromText("waterFetcher"), this.rate, true); },
                 personality: "stern",
@@ -1412,7 +1412,7 @@ function newGame() {
                 label: "Pumping System",
                 resourceGain: {
                     water: {
-                        base: 10
+                        base: 30
                     }
                 },
                 bought: false
@@ -1422,7 +1422,7 @@ function newGame() {
                 label: "Nebuchadnezzar",
                 resourceGain: {
                     stone: {
-                        base: 1
+                        base: 10
                     }
                 },
                 bought: false
@@ -1432,7 +1432,7 @@ function newGame() {
                 label: "Ecumenism",
                 resourceGain: {
                     wheat: {
-                        base: 5
+                        base: 50
                     }
                 },
                 bought: false
@@ -1442,7 +1442,7 @@ function newGame() {
                 label: "Navigation",
                 resourceGain: {
                     wood: {
-                        base: 5
+                        base: 50
                     }
                 },
                 bought: false
@@ -1452,7 +1452,7 @@ function newGame() {
                 label: "Independence",
                 resourceGain: {
                     silver: {
-                        base: 0.5
+                        base: 5
                     }
                 },
                 bought: false
@@ -1489,7 +1489,7 @@ function newGame() {
                 description: function () { return "Carrying water by yourself has become tiresome. Making others do it for you will help."; },
                 resourceCost: {
                     water: {
-                        base: 1
+                        base: 10
                     }
                 },
                 effect: function () {
@@ -1505,7 +1505,7 @@ function newGame() {
                 description: function () { return "Discover the method of cutting trees down to keep natural resources for yourself. This might lead to a better future."; },
                 resourceCost: {
                     water: {
-                        base: 2
+                        base: 20
                     }
                 },
                 effect: function () { unlock("wood", "lumberjack"); tutorialMessage("resources"); },
@@ -1520,7 +1520,7 @@ function newGame() {
                     else return "Wow that bucket is useful! You should make a better one. Instead of <b>" + this.current + "</b> Water, every time you complete the <b>Water Progress</b> bar you will now carry <b>" + prettify(this.current + this.rate, 2) + "</b> Water.";
                 },
                 current: 1,
-                rate: 0.25,
+                rate: 0.8,
                 level: 1,
                 maxLevel: 4,
                 resourceCost: {
@@ -1540,7 +1540,7 @@ function newGame() {
                 name: "upgBarrels",
                 label: "Barrels",
                 description: function () { return "Putting your woodworking skills to the task would allow you to build a container for all that water you're accumulating. Your maximum <b>Water</b> capacity increases by <b>+" + this.rate + "</b> with every level of this upgrade." },
-                rate: 10,
+                rate: 100,
                 level: 1,
                 maxLevel: 4,
                 resourceCost: {
@@ -1561,7 +1561,7 @@ function newGame() {
                 name: "upgWaterTap",
                 label: "Water Tap",
                 description: function () { return "Unlock your untapped potential. You can now gain <b>+" + this.current + "</b> more <b>Water Progress</b> per click!"; },
-                current: 1,
+                current: 10,
                 resourceCost: {
                     water: {
                         base: 20
@@ -1575,7 +1575,7 @@ function newGame() {
                 name: "upgWaterTap2",
                 label: "Water Tap II",
                 description: function () { return "They will be talking about you in history books now. You can now gain <b>+" + this.current + "</b> more <b>Water Progress</b> per click!"; },
-                current: 3,
+                current: 30,
                 resourceCost: {
                     water: {
                         base: 500
@@ -1590,7 +1590,7 @@ function newGame() {
                 name: "upgWaterTap3",
                 label: "Water Tap III",
                 description: function () { return "Your potential is finally being achieved. You can now gain <b>+" + this.current + "</b> more <b>Water Progress</b> per click!"; },
-                current: 15,
+                current: 150,
                 resourceCost: {
                     water: {
                         base: 2000
@@ -1605,7 +1605,7 @@ function newGame() {
                 name: "upgWoodTap",
                 label: "Wood Tap",
                 description: function () { return "Further unlocks your untapped potential. You can now gain <b>+" + this.current + "</b> more <b>Wood Progress</b> per click!"; },
-                current: 1,
+                current: 10,
                 resourceCost: {
                     wood: {
                         base: 10
@@ -1619,7 +1619,7 @@ function newGame() {
                 name: "upgWoodTap2",
                 label: "Wood Tap II",
                 description: function () { return "They will be talking about you in history books now. You can now gain <b>+" + this.current + "</b> more <b>Wood Progress</b> per click!"; },
-                current: 4,
+                current: 40,
                 resourceCost: {
                     wood: {
                         base: 325
@@ -1634,7 +1634,7 @@ function newGame() {
                 name: "upgWoodTap3",
                 label: "Wood Tap III",
                 description: function () { return "Reach levels of productivity previously thought impossible. You can now gain <b>+" + this.current + "</b> more <b>Wood Progress</b> per click!"; },
-                current: 32,
+                current: 320,
                 resourceCost: {
                     wood: {
                         base: 1000
@@ -1649,7 +1649,7 @@ function newGame() {
                 name: "upgStoneTap",
                 label: "Stone Tap",
                 description: function () { return "Discover new ways to extract Stone by yourself. You can now gain <b>+" + this.current + "</b> more <b>Stone Progress</b> per click!"; },
-                current: 3,
+                current: 30,
                 resourceCost: {
                     stone: {
                         base: 35
@@ -1663,7 +1663,7 @@ function newGame() {
                 name: "upgStoneTap2",
                 label: "Stone Tap II",
                 description: function () { return "They will be talking about you in history books now. You can now gain <b>+" + this.current + "</b> more <b>Stone Progress</b> per click!"; },
-                current: 4,
+                current: 40,
                 resourceCost: {
                     stone: {
                         base: 80
@@ -1677,7 +1677,7 @@ function newGame() {
                 name: "upgStoneTap3",
                 label: "Stone Tap III",
                 description: function () { return "Reach levels of productivity previously thought impossible. You can now gain <b>+" + this.current + "</b> more <b>Stone Progress</b> per click!"; },
-                current: 27,
+                current: 270,
                 resourceCost: {
                     stone: {
                         base: 850
@@ -1692,7 +1692,7 @@ function newGame() {
                 name: "upgIronTap",
                 label: "Iron Tap",
                 description: function () { return "Breakthrough in technology allows you to extract much more Iron. You can now gain <b>+" + this.current + "</b> more <b>Iron Progress</b> per click!"; },
-                current: 74,
+                current: 740,
                 resourceCost: {
                     iron: {
                         base: 175
@@ -1706,7 +1706,7 @@ function newGame() {
                 name: "upgWheatTap",
                 label: "Wheat Tap",
                 description: function () { return "Find your green thumb. You can now gain <b>+" + this.current + "</b> more <b>Wheat Progress</b> per click!"; },
-                current: 2,
+                current: 20,
                 resourceCost: {
                     wheat: {
                         base: 1500
@@ -1720,7 +1720,7 @@ function newGame() {
                 name: "upgWheatTap2",
                 label: "Wheat Tap II",
                 description: function () { return "Become the ultimate harvester. You can now gain <b>+" + this.current + "</b> more <b>Wheat Progress</b> per click!"; },
-                current: 7,
+                current: 70,
                 resourceCost: {
                     wheat: {
                         base: 2000
@@ -1734,7 +1734,7 @@ function newGame() {
                 name: "upgSilverTap",
                 label: "Silver Tap",
                 description: function () { return "Breakthrough in technology allows you to extract much more Silver. You can now gain <b>+" + this.current + "</b> more <b>Silver Progress</b> per click!"; },
-                current: 99,
+                current: 990,
                 resourceCost: {
                     silver: {
                         base: 300
@@ -1748,7 +1748,7 @@ function newGame() {
                 name: "upgShed",
                 label: "Shed",
                 description: function () { return "It's getting harder to store all that wood, you'll need to do something about it. Each shed will increase your maximum capacity for wood by <b>+" + this.rate + "</b>"; },
-                rate: 10,
+                rate: 100,
                 level: 1,
                 maxLevel: 4,
                 resourceCost: {
@@ -1769,7 +1769,7 @@ function newGame() {
                 name: "upgSharperAxes",
                 label: "Sharper Axes",
                 description: function () { return "Equip your lumberjacks with better axes. This will boost their current gathering rate by <b>+" + this.rate + " Wood Progress</b> per second."; },
-                rate: 0.1,
+                rate: 1,
                 resourceCost: {
                     wood: {
                         base: 20
@@ -1783,7 +1783,7 @@ function newGame() {
                 name: "upgMining",
                 label: "Mining",
                 description: function () { return "One of your lumberjacks noticed a cave in the forest. By clearing the area, you will have access to start mining from it. This also grants you <b>+" + this.rate + "</b> storage capabilities for <b>Water</b> and <b>Wood</b>."; },
-                rate: 30,
+                rate: 300,
                 resourceCost: {
                     water: {
                         base: 40
@@ -1807,7 +1807,7 @@ function newGame() {
                 label: "Wood Cart",
                 description: function () { return "By using a solid cart, you can carry more wood back to your storage. Each time you complete the <b>Wood Progress</b> bar, instead of <b>" + this.current + " Wood</b>, you will gain " + "<b>" + prettify(this.current + this.rate, 2) + " Wood</b>."; },
                 current: 1,
-                rate: 0.25,
+                rate: 2.5,
                 level: 1,
                 maxLevel: 4,
                 resourceCost: {
@@ -1831,7 +1831,7 @@ function newGame() {
                 name: "upgStoneBucket",
                 label: "Stone Bucket",
                 description: function () { return "A heavier bucket. Increases the amount of <b>Water Progress</b> it takes to gather <b>Water</b> by <b>" + this.maxRate + "</b>, but increases the amount of <b>Water</b> you get by <b>" + this.rate + "</b>!"; },
-                maxRate: 2,
+                maxRate: 20,
                 rate: 1,
                 resourceCost: {
                     wood: {
@@ -1849,8 +1849,8 @@ function newGame() {
                 name: "upgStoneAxe",
                 label: "Stone Axe",
                 description: function () { return "A heavier axe. Increases the amount of <b>Wood Progress</b> it takes to gather <b>Wood</b> by <b>" + this.maxRate + "</b>, but increases the amount of <b>Wood</b> you get by <b>" + this.rate + "</b>!"; },
-                maxRate: 5,
-                rate: 1,
+                maxRate: 50,
+                rate: 10,
                 resourceCost: {
                     wood: {
                         base: 25
@@ -1867,8 +1867,8 @@ function newGame() {
                 name: "upgStonePickaxe",
                 label: "Stone Pickaxe",
                 description: function () { return "A stone pickaxe. Your technology is increasing at a tremendous rate. Increases the amount of <b>Stone Progress</b> it takes to gather <b>Stone</b> by <b>" + this.maxRate + "</b>, but increases the amount of <b>Stone</b> you get by <b>" + this.rate + "</b>!"; },
-                maxRate: 10,
-                rate: 1,
+                maxRate: 100,
+                rate: 10,
                 resourceCost: {
                     wood: {
                         base: 50
@@ -1899,8 +1899,8 @@ function newGame() {
             upgMasonry2: {
                 name: "upgMasonry2",
                 label: "Masonry II",
-                description: function () { return "Your advanced understanding of building allows you to save on construction costs. By purchasing this upgrade, <b>All Buildings</b> will cost <b>2.5% less</b>."; },
-                rate: -0.025,
+                description: function () { return "Your advanced understanding of building allows you to save on construction costs. By purchasing this upgrade, <b>All Buildings</b> will cost <b>25% less</b>."; },
+                rate: -0.25,
                 resourceCost: {
                     stone: {
                         base: 700
@@ -1917,8 +1917,8 @@ function newGame() {
             upgMasonry3: {
                 name: "upgMasonry3",
                 label: "Masonry III",
-                description: function () { return "Your understanding of architecture increases further, allowing you to save on construction costs. By purchasing this upgrade, <b>All Buildings</b> will cost <b>2.5% less</b>."; },
-                rate: -0.025,
+                description: function () { return "Your understanding of architecture increases further, allowing you to save on construction costs. By purchasing this upgrade, <b>All Buildings</b> will cost <b>25% less</b>."; },
+                rate: -0.25,
                 resourceCost: {
                     stone: {
                         base: 800
@@ -1935,8 +1935,8 @@ function newGame() {
             upgMasonry4: {
                 name: "upgMasonry4",
                 label: "Masonry IV",
-                description: function () { return "Advanced architectural studies drastically renew your ability to mitigate construction costs. By purchasing this upgrade, <b>All Buildings</b> will cost <b>2.5% less</b>."; },
-                rate: -0.025,
+                description: function () { return "Advanced architectural studies drastically renew your ability to mitigate construction costs. By purchasing this upgrade, <b>All Buildings</b> will cost <b>25% less</b>."; },
+                rate: -0.25,
                 resourceCost: {
                     iron: {
                         base: 10000
@@ -1966,8 +1966,8 @@ function newGame() {
                 name: "upgMineCart",
                 label: "Mine Cart",
                 description: function () { return "Allows your miners to drag the stone out of the mine at a quicker pace. With this, your miners will gather <b>Stone Progress</b> at an additional rate of <b>+" + this.rate + " per second</b>. Also increases your maximum <b>Stone</b> capacity by <b>+" + this.maxRate + "</b>."; },
-                rate: 0.1,
-                maxRate: 1,
+                rate: 1,
+                maxRate: 10,
                 level: 1,
                 maxLevel: 5,
                 resourceCost: {
@@ -1988,7 +1988,7 @@ function newGame() {
                 name: "upgWaterDam",
                 label: "Water Dam",
                 description: function () { return "Start digging a dam to contain <b>Water</b> in. Every level of your dam will give you <b>+" + this.rate + "</b> on your maximum capacity for <b>Water</b>."; },
-                rate: 20,
+                rate: 200,
                 level: 1,
                 maxLevel: 6,
                 resourceCost: {
@@ -2009,8 +2009,8 @@ function newGame() {
                 name: "upgWoodenStorage",
                 label: "Wooden Storage",
                 description: function () { return "A small enclosure for the sole purpose of storing resources. This will increase your maximum capacity for <b>Wood</b> by <b>+" + this.woodMax + "</b> and for <b>Stone</b> by <b>+" + this.stoneMax + "</b>."; },
-                woodMax: 20,
-                stoneMax: 15,
+                woodMax: 200,
+                stoneMax: 150,
                 resourceCost: {
                     water: {
                         base: 125
@@ -2030,7 +2030,7 @@ function newGame() {
                 name: "upgWoodenBasin",
                 label: "Wooden Basin",
                 description: function () { return "With some experimentation, you manage to craft what looks like bigger versions of water buckets. Your <b>Water Fetchers</b> will gather by <b>+" + this.rate + " per second</b>."; },
-                rate: 0.1,
+                rate: 1,
                 resourceCost: {
                     wood: {
                         base: 100
@@ -2044,8 +2044,8 @@ function newGame() {
                 name: "upgIronBucket",
                 label: "Iron Bucket",
                 description: function () { return "An even heavier bucket. Increases the amount of <b>Water Progress</b> it takes to gather <b>Water</b> by <b>" + this.maxRate + "</b>, but increases the amount of <b>Water</b> you get by <b>" + this.rate + "</b>!"; },
-                maxRate: 13,
-                rate: 4,
+                maxRate: 130,
+                rate: 40,
                 resourceCost: {
                     water: {
                         base: 550
@@ -2065,8 +2065,8 @@ function newGame() {
                 name: "upgIronAxe",
                 label: "Iron Axe",
                 description: function () { return "An even heavier axe. Increases the amount of <b>Wood Progress</b> it takes to gather <b>Wood</b> by <b>" + this.maxRate + "</b>, but increases the amount of <b>Wood</b> you get by <b>" + this.rate + "</b>!"; },
-                maxRate: 20,
-                rate: 3,
+                maxRate: 200,
+                rate: 30,
                 resourceCost: {
                     wood: {
                         base: 400
@@ -2086,8 +2086,8 @@ function newGame() {
                 name: "upgIronPickaxe",
                 label: "Iron Pickaxe",
                 description: function () { return "An even heavier pickaxe. Increases the amount of <b>Stone Progress</b> it takes to gather <b>Stone</b> by <b>" + this.maxRate + "</b>, but increases the amount of <b>Stone</b> you get by <b>" + this.rate + "</b>!"; },
-                maxRate: 80,
-                rate: 4,
+                maxRate: 800,
+                rate: 40,
                 resourceCost: {
                     stone: {
                         base: 130
@@ -2106,7 +2106,7 @@ function newGame() {
                 description: function () { return "A heavy sickle to greatly improve your farming. Increases the amount of <b>Wheat</b> you get by <b>+" + this.rate + "</b> every time you the <b>Wheat Progress</b> bar is completed."; },
                 level: 1,
                 maxLevel: 8,
-                rate: 0.5,
+                rate: 5,
                 resourceCost: {
                     wood: {
                         base: 500,
@@ -2125,7 +2125,7 @@ function newGame() {
                 name: "upgCasingWater",
                 label: "Casing (Water)",
                 description: function () { return "Advances in storage technologies allows you to increase your storage of <b>Water</b> by <b>+" + this.rate + "</b> per level."; },
-                rate: 260,
+                rate: 2600,
                 level: 1,
                 maxLevel: 5,
                 resourceCost: {
@@ -2146,7 +2146,7 @@ function newGame() {
                 name: "upgCasingWood",
                 label: "Casing (Wood)",
                 description: function () { return "Advances in storage technologies allows you to increase your storage of <b>Wood</b> by <b>+" + this.rate + "</b> per level."; },
-                rate: 190,
+                rate: 1900,
                 level: 1,
                 maxLevel: 5,
                 resourceCost: {
@@ -2167,7 +2167,7 @@ function newGame() {
                 name: "upgCasingStone",
                 label: "Casing (Stone)",
                 description: function () { return "Advances in storage technologies allows you to increase your storage of <b>Stone</b> by <b>+" + this.rate + "</b> per level."; },
-                rate: 95,
+                rate: 950,
                 level: 1,
                 maxLevel: 5,
                 resourceCost: {
@@ -2188,7 +2188,7 @@ function newGame() {
                 name: "upgCasingIron",
                 label: "Casing (Iron)",
                 description: function () { return "Advances in storage technologies allows you to increase your storage of <b>Iron</b> by <b>+" + this.rate + "</b> per level."; },
-                rate: 5,
+                rate: 50,
                 level: 1,
                 maxLevel: 5,
                 resourceCost: {
@@ -2207,7 +2207,7 @@ function newGame() {
                 description: function () { return "Your newer tools allow you to dig deeper into the earth to extract more water. Grants each <b>Water Fetcher</b> an additional rate of <b>+" + this.rate + " Water Progress per second</b> and each <b>Water Mill</b> by <b>+" + this.rate + " Water per second</b>."; },
                 level: 1,
                 maxLevel: 3,
-                rate: 0.1,
+                rate: 1,
                 resourceCost: {
                     iron: {
                         base: 3,
@@ -2224,7 +2224,7 @@ function newGame() {
                 description: function () { return "You learn to care for the forest to get more from its resources in the long run. Grants each <b>Lumberjack</b> an additional rate of <b>+" + this.rate + " Wood Progress per second</b> and each <b>Sawmill</b> by <b>+" + this.rate + " Wood per second</b>."; },
                 level: 1,
                 maxLevel: 3,
-                rate: 0.1,
+                rate: 1,
                 resourceCost: {
                     stone: {
                         base: 50,
@@ -2245,7 +2245,7 @@ function newGame() {
                 description: function () { return "Expertly curating and milling stones allows you to keep more of them. Grants each <b>Miner</b> an additional rate of <b>+" + this.rate + " Stone Progress per second</b> and each <b>Stone Quarry</b> by <b>+" + this.rate + " Stone per second</b>."; },
                 level: 1,
                 maxLevel: 3,
-                rate: 0.1,
+                rate: 1,
                 resourceCost: {
                     stone: {
                         base: 100,
@@ -2266,7 +2266,7 @@ function newGame() {
                 description: function () { return "Expertly curating and milling stones allows you to keep even more of them than you previously thought possible. Grants each <b>Miner</b> an additional rate of <b>+" + this.rate + " Stone Progress per second</b>."; },
                 level: 1,
                 maxLevel: 3,
-                rate: 0.1,
+                rate: 1,
                 resourceCost: {
                     stone: {
                         base: 250,
@@ -2286,7 +2286,7 @@ function newGame() {
                 name: "upgMonarchy",
                 label: "Monarchy",
                 description: function () { return "Establish law and order through your wise kingship. Enables you to hire <b>Ironsmiths</b>, as well as collect dues from Farmers through <b>Agriculture</b>. Your <b>Miners</b> will produce an additional <b>" + this.rate + " Stone Progress per second</b>."; },
-                rate: 0.5,
+                rate: 5,
                 resourceCost: {
                     water: {
                         base: 1200
@@ -2311,8 +2311,8 @@ function newGame() {
             upgVassalism: {
                 name: "upgVassalism",
                 label: "Vassalism",
-                description: function () { return "Delegate your resource management to trusty vassals. As a result of their loyalty, your economy grows at an accelerated pace, allowing you to buy workers for cheaper. Reduces the cost of <b>All Workers</b> by <b>5%</b>."; },
-                rate: -0.05,
+                description: function () { return "Delegate your resource management to trusty vassals. As a result of their loyalty, your economy grows at an accelerated pace, allowing you to buy workers for cheaper. Reduces the cost of <b>All Workers</b> by <b>50%</b>."; },
+                rate: -0.5,
                 resourceCost: {
                     stone: {
                         base: 500
@@ -2329,7 +2329,7 @@ function newGame() {
                 name: "upgTheology2",
                 label: "Theology II",
                 description: function () { return "Expand the scope of the churches within your civilization. Greatly increases the effectiveness of the clergy by increasing the production of each <b>Church</b> by <b>+" + this.rate + " Resources per second</b>, at the cost of an additional <b>" + Math.abs(this.maxRate) + " Resource Progress per second</b>."; },
-                rate: 0.1,
+                rate: 0.2,
                 maxRate: -0.1,
                 resourceCost: {
                     stone: {
@@ -2362,8 +2362,8 @@ function newGame() {
                 label: "Tenacity",
                 description: function () { return "Your cumulated experience through trial and error over the past colonies has given you a keen sense of perseverance. Your <b>Miners</b> gain an increase in production by <b>+" + this.rate + " Stone Progress per second</b> and your <b>Sawmills<b> produce an additional <b>+" + this.maxRate + " Wood per second</b>."; },
                 type: "free",
-                rate: 1,
-                maxRate: 0.1,
+                rate: 10,
+                maxRate: 1,
                 resourceCost: {},
                 effect: function () { upgradeWorkerRate("miner", this.rate, "stoneP"); upgradeWorkerRate("sawmill", this.maxRate); },
                 canUnlock: function () { return game.player.colonies >= 3; },
@@ -2374,9 +2374,9 @@ function newGame() {
                 name: "upgFoundations",
                 label: "Foundations",
                 description: function () { return "Entrench your castle with solid foundations. Mostly it just looks nice, but it will also allow you to store:<b><br />+" + this.woodMax + " Maximum Wood<br />+" + this.stoneMax + " Maximum Stone<br />+" + this.ironMax + " Maximum Iron<br /></b>"; },
-                woodMax: 350,
-                stoneMax: 130,
-                ironMax: 60,
+                woodMax: 3500,
+                stoneMax: 1300,
+                ironMax: 600,
                 resourceCost: {
                     water: {
                         base: 1500
@@ -2440,9 +2440,9 @@ function newGame() {
                 name: "upgIrrigation",
                 label: "Irrigation",
                 description: function () { return "The process of digging channels to help water flow through your fields turns your labor into more plentiful crops. Increases the production rate of <b>Farmer</b> by <b>+" + this.rate + " Wheat per second</b>. However, it will increase their cost by <b>" + Math.abs(this.waterMax) + " Water per second</b>. Will also add <b>+" + this.wheatMax + "</b> to your Wheat maximum storage capacity."; },
-                rate: 0.4,
+                rate: 4,
                 waterMax: -0.2,
-                wheatMax: 1000,
+                wheatMax: 10000,
                 resourceCost: {
                     water: {
                         base: 1500
@@ -2462,7 +2462,7 @@ function newGame() {
                 name: "upgEducation",
                 label: "Education",
                 description: function () { return "Dispense the necessary formal knowledge for your population to work effectively. With this upgrade, each <b>Farmer</b> gains an increase in production of <b>+" + this.rate + " Wheat Progress per second</b>."; },
-                rate: 0.1,
+                rate: 0.7,
                 level: 1,
                 maxLevel: 3,
                 resourceCost: {
@@ -2488,7 +2488,7 @@ function newGame() {
                 name: "upgApprenticeship",
                 label: "Apprenticeship",
                 description: function () { return "Through refining the arts of the trade, your more experienced workers can watch over apprentices for various benefits. Provides you with <b>More Worker Types</b> to purchase. Will also increase your maximum capacity for <b>Iron</b> by <b>" + this.ironMax + "</b>."; },
-                ironMax: 50,
+                ironMax: 500,
                 resourceCost: {
                     stone: {
                         base: 500
@@ -2517,8 +2517,8 @@ function newGame() {
             upgScarcity: {
                 name: "upgScarcity",
                 label: "Scarcity",
-                description: function () { return "The lack of available resources forces you to improvise. Reduce the cumulative cost increase rate of <b>Water</b> for each <b>Water Fetcher</b> purchased by <b>20%</b>. This makes water fetchers significantly cheaper."; },
-                rate: -0.05,
+                description: function () { return "The lack of available resources forces you to improvise. Reduce the cumulative cost increase rate of <b>Water</b> for each <b>Water Fetcher</b> purchased by <b>50%</b>. This makes water fetchers significantly cheaper."; },
+                rate: -0.5,
                 resourceCost: {
                     wood: {
                         base: 500
@@ -2537,8 +2537,8 @@ function newGame() {
             upgScarcity2: {
                 name: "upgScarcity2",
                 label: "Scarcity II",
-                description: function () { return "The lack of available resources forces you to improvise further. Reduce the cumulative cost increase rate of <b>Stone</b> for each <b>Water Mill</b> purchased by <b>10%</b>. This makes water mills significantly cheaper."; },
-                rate: -0.05,
+                description: function () { return "The lack of available resources forces you to improvise further. Reduce the cumulative cost increase rate of <b>Stone</b> for each <b>Water Mill</b> purchased by <b>50%</b>. This makes water mills significantly cheaper."; },
+                rate: -0.5,
                 resourceCost: {
                     wood: {
                         base: 750
@@ -2554,8 +2554,8 @@ function newGame() {
             upgScarcity3: {
                 name: "upgScarcity3",
                 label: "Scarcity III",
-                description: function () { return "The lack of available resources forces you to improvise ever more. Reduce the cumulative cost increase rate of <b>Water</b> for each <b>Lumberjack</b> purchased by <b>15%</b>. This makes lumberjacks significantly cheaper."; },
-                rate: -0.05,
+                description: function () { return "The lack of available resources forces you to improvise ever more. Reduce the cumulative cost increase rate of <b>Water</b> for each <b>Lumberjack</b> purchased by <b>50%</b>. This makes lumberjacks significantly cheaper."; },
+                rate: -005,
                 resourceCost: {
                     wood: {
                         base: 2000
@@ -2575,8 +2575,8 @@ function newGame() {
                 description: function () { return "A growing expertise in the art of processing iron allows you to make the process more efficient. Grants each <b>Ironsmith</b> an additional rate of <b>+" + this.rate + " Iron Progress per second</b> and each <b>Foundry</b> by <b>+" + this.ironMax + " Iron per second</b>."; },
                 level: 1,
                 maxLevel: 2,
-                rate: 1,
-                ironMax: 0.1,
+                rate: 3,
+                ironMax: 0.5,
                 resourceCost: {
                     water: {
                         base: 2000,
@@ -2604,7 +2604,7 @@ function newGame() {
                 },
                 level: 1,
                 maxLevel: 5,
-                rate: -50,
+                rate: -100,
                 resourceCost: {
                     wood: {
                         base: 1000,
@@ -2646,7 +2646,7 @@ function newGame() {
                 description: function () { return "Persuade some of your people to work harder for you. Grants each <b>Water Fetcher</b> an additional rate of <b>+" + this.rate + " Water Progress per second</b> and each <b>Miner</b> an additional rate of <b>+" + this.rate + " Stone Progress per second</b>."; },
                 level: 1,
                 maxLevel: 4,
-                rate: 0.1,
+                rate: 0.7,
                 resourceCost: {
                     water: {
                         base: 1000,
@@ -2675,7 +2675,7 @@ function newGame() {
                 description: function () { return "Persuade some more of your people to work harder for you. Grants each <b>Lumberjack</b> an additional rate of <b>+" + this.rate + " Wood Progress per second</b> and each <b>Ironsmith</b> an additional rate of <b>+" + this.rate + " Iron Progress per second</b>."; },
                 level: 1,
                 maxLevel: 5,
-                rate: 0.1,
+                rate: 0.7,
                 resourceCost: {
                     water: {
                         base: 1000,
@@ -2698,9 +2698,9 @@ function newGame() {
                 name: "upgStoneStorage",
                 label: "Stone Storage",
                 description: function () { return "A large stone enclosure for the sole purpose of storing resources. This will increase your maximum capacity for <b>Water</b> by <b>+" + this.waterMax + "</b>, your <b>Wood</b> by <b>+" + this.woodMax + "</b> and for <b>Stone</b> by <b>+" + this.stoneMax + "</b>."; },
-                waterMax: 1750,
-                woodMax: 1000,
-                stoneMax: 1000,
+                waterMax: 17500,
+                woodMax: 10000,
+                stoneMax: 10000,
                 resourceCost: {
                     wood: {
                         base: 1500
@@ -2717,7 +2717,7 @@ function newGame() {
                 name: "upgFarmhouses",
                 label: "Farmhouses",
                 description: function () { return "Start building farmhouses to help your <b>Farmers</b> rest after a long day at work. This will greatly help with their overall productivity. Increases the production rate of each <b>Farmer</b> by <b>+" + this.rate + " Wheat Progress per second</b>."; },
-                rate: 0.1,
+                rate: 0.5,
                 level: 1,
                 maxLevel: 5,
                 resourceCost: {
@@ -2738,7 +2738,7 @@ function newGame() {
                 name: "upgHarvest",
                 label: "Harvest",
                 description: function () { return "Organize a large harvest distribution to boost the morale of your workers. Increases the production rate of each <b>Ironsmith</b> by <b>+" + this.rate + " Iron Progress per second</b>."; },
-                rate: 0.5,
+                rate: 2.5,
                 level: 1,
                 maxLevel: 10,
                 resourceCost: {
@@ -2755,7 +2755,7 @@ function newGame() {
                 name: "upgIronBasket",
                 label: "Iron Basket",
                 description: function () { return "Construct small iron baskets to hold resources in. Adds an additional <b>+" + (this.level == this.maxLevel ? 250 : this.rate) + "</b> to the maximum capacity of <b>Wheat</b>."; },
-                rate: 150,
+                rate: 1500,
                 level: 1,
                 maxLevel: 11,
                 resourceCost: {
@@ -2792,8 +2792,8 @@ function newGame() {
                 name: "upgSilverBucket",
                 label: "Silver Bucket",
                 description: function () { return "A shiny bucket. Increases the amount of <b>Water Progress</b> it takes to gather <b>Water</b> by <b>" + this.maxRate + "</b>, but increases the amount of <b>Water</b> you get by <b>" + this.rate + "</b>!"; },
-                maxRate: 15,
-                rate: 2,
+                maxRate: 150,
+                rate: 20,
                 resourceCost: {
                     wood: {
                         base: 400
@@ -2810,8 +2810,8 @@ function newGame() {
                 name: "upgSilverAxe",
                 label: "Silver Axe",
                 description: function () { return "A shiny axe. Increases the amount of <b>Wood Progress</b> it takes to gather <b>Wood</b> by <b>" + this.maxRate + "</b>, but increases the amount of <b>Wood</b> you get by <b>" + this.rate + "</b>!"; },
-                maxRate: 25,
-                rate: 1,
+                maxRate: 250,
+                rate: 10,
                 resourceCost: {
                     wood: {
                         base: 500
@@ -2828,8 +2828,8 @@ function newGame() {
                 name: "upgSilverPickaxe",
                 label: "Silver Pickaxe",
                 description: function () { return "A shiny pickaxe. Increases the amount of <b>Stone Progress</b> it takes to gather <b>Stone</b> by <b>" + this.maxRate + "</b>, but increases the amount of <b>Stone</b> you get by <b>" + this.rate + "</b>!"; },
-                maxRate: 60,
-                rate: 2,
+                maxRate: 600,
+                rate: 20,
                 resourceCost: {
                     wood: {
                         base: 600
@@ -2846,8 +2846,8 @@ function newGame() {
                 name: "upgSilverPickaxe2",
                 label: "Silver Pickaxe II",
                 description: function () { return "Another shiny pickaxe. Increases the amount of <b>Iron Progress</b> it takes to gather <b>Iron</b> by <b>" + this.maxRate + "</b>, but increases the amount of <b>Iron</b> you get by <b>" + this.rate + "</b>!"; },
-                maxRate: 200,
-                rate: 3,
+                maxRate: 2000,
+                rate: 30,
                 resourceCost: {
                     wood: {
                         base: 700
@@ -2864,8 +2864,8 @@ function newGame() {
                 name: "upgSilverPickaxe3",
                 label: "Silver Pickaxe III",
                 description: function () { return "One more shiny pickaxe. Increases the amount of <b>Silver Progress</b> it takes to gather <b>Silver</b> by <b>" + this.maxRate + "</b>, but increases the amount of <b>Silver</b> you get by <b>" + this.rate + "</b>!"; },
-                maxRate: 500,
-                rate: 5,
+                maxRate: 5000,
+                rate: 50,
                 resourceCost: {
                     wood: {
                         base: 900
@@ -2882,8 +2882,8 @@ function newGame() {
                 name: "upgSilverSickle",
                 label: "Silver Sickle",
                 description: function () { return "A shiny sickle. Increases the amount of <b>Wheat Progress</b> it takes to gather <b>Wheat</b> by <b>" + this.maxRate + "</b>, but increases the amount of <b>Wheat</b> you get by <b>" + this.rate + "</b>! Will also allow you to hire <b>Farm Hands</b>."; },
-                maxRate: 5,
-                rate: 2,
+                maxRate: 50,
+                rate: 200,
                 resourceCost: {
                     wood: {
                         base: 800
@@ -2972,7 +2972,7 @@ function newGame() {
                 description: function () { return "Start massively stocking up on resources. Increases the maximum capacity of <b>Water</b> by <b>+" + prettify(this.rate * this.level, 0, true) + "</b>."; },
                 level: 1,
                 maxLevel: 50,
-                rate: 1000,
+                rate: 10000,
                 resourceCost: {
                     water: {
                         base: 2500,
@@ -2989,7 +2989,7 @@ function newGame() {
                 description: function () { return "Start massively stocking up on resources. Increases the maximum capacity of <b>Wood</b> by <b>+" + prettify(this.rate * this.level, 0, true) + "</b>."; },
                 level: 1,
                 maxLevel: 50,
-                rate: 1000,
+                rate: 10000,
                 resourceCost: {
                     wood: {
                         base: 1750,
@@ -3006,7 +3006,7 @@ function newGame() {
                 description: function () { return "Start massively stocking up on resources. Increases the maximum capacity of <b>Stone</b> by <b>+" + prettify(this.rate * this.level, 0, true) + "</b>."; },
                 level: 1,
                 maxLevel: 50,
-                rate: 500,
+                rate: 5000,
                 resourceCost: {
                     stone: {
                         base: 1000,
@@ -3023,7 +3023,7 @@ function newGame() {
                 description: function () { return "Start massively stocking up on resources. Increases the maximum capacity of <b>Iron</b> by <b>+" + prettify(this.rate * this.level, 0, true) + "</b>."; },
                 level: 1,
                 maxLevel: 50,
-                rate: 100,
+                rate: 1000,
                 resourceCost: {
                     iron: {
                         base: 250,
@@ -3040,7 +3040,7 @@ function newGame() {
                 description: function () { return "Start massively stocking up on resources. Increases the maximum capacity of <b>Wheat</b> by <b>+" + prettify(this.rate * this.level, 0, true) + "</b>."; },
                 level: 1,
                 maxLevel: 50,
-                rate: 1000,
+                rate: 10000,
                 resourceCost: {
                     wheat: {
                         base: 2500,
@@ -3054,10 +3054,10 @@ function newGame() {
             upgPrestigePoint: {
                 name: "upgPrestigePoint",
                 label: "Prestige Point",
-                description: function () { return "You feel invigorated by the prospect of settling into a colony, away from the complexity of your now powerful empire. By researching this upgrade, you gain <b>1 Prestige Point</b> for your next colony."; },
+                description: function () { return "You feel invigorated by the prospect of settling into a colony, away from the complexity of your now powerful empire. By researching this upgrade, you gain <b>2 Prestige Point</b> for your next colony."; },
                 type: "free",
                 resourceCost: {},
-                effect: function () { addPrestigePoints(1); },
+                effect: function () { addPrestigePoints(2); },
                 locked: true,
                 bought: false
             },
@@ -3065,7 +3065,7 @@ function newGame() {
                 name: "upgAqueducts",
                 label: "Aqueducts",
                 description: function () { return "Invest in recreating technology from the past to perfect your current water systems. Increases the production of each <b>Water Mill</b> by a rate of <b>" + this.rate + " Water per second</b>."; },
-                rate: 0.1,
+                rate: 0.9,
                 resourceCost: {
                     stone: {
                         base: 2500
@@ -3082,7 +3082,7 @@ function newGame() {
                 name: "upgFineLumber",
                 label: "Fine Lumber",
                 description: function () { return "Send your <b>Lumberjacks</b> deeper in the forest to reach finer timber that grants additional resources. This increases their production by <b>+" + this.rate + " Wood Progress per second</b> for each level purchased."; },
-                rate: 0.3,
+                rate: 0.9,
                 level: 1,
                 maxLevel: 7,
                 resourceCost: {
@@ -3107,7 +3107,7 @@ function newGame() {
                 name: "upgHeavyMining",
                 label: "Heavy Mining",
                 description: function () { return "Innovative mining techniques allow your <b>Silversmiths</b> to work at an increased efficiency. Increase their work rate by <b>+" + this.rate + " Silver Progress per second</b> and increase the max capacity of <b>Silver</b> by <b>" + this.maxRate + "</b>."; },
-                rate: 0.5,
+                rate: 0.9,
                 maxRate: 100,
                 level: 1,
                 maxLevel: 8,
@@ -3137,7 +3137,7 @@ function newGame() {
                 name: "upgBetterFoundries",
                 label: "Better Foundries",
                 description: function () { return "Have a second look at the design of your foundries to spot any improvements that could be made. Grants each <b>Foundry</b> with an additional gain of <b>+" + this.rate + " Iron per second</b>."; },
-                rate: 0.1,
+                rate: 0.7,
                 resourceCost: {
                     stone: {
                         base: 10000
@@ -3154,7 +3154,7 @@ function newGame() {
                 name: "upgBetterMills",
                 label: "Better Mills",
                 description: function () { return "Have a second look at the design of your mills to spot any improvements that could be made. Grants each <b>Water Mill</b> with an additional gain of <b>+" + this.rate + " Water per second</b> and each <b>Grain Mill</b> with an additional gain of <b>+" + this.rate + " Wheat per second</b>."; },
-                rate: 0.1,
+                rate: 0.7,
                 resourceCost: {
                     stone: {
                         base: 13000
@@ -3193,7 +3193,7 @@ function newGame() {
                 description: function () { return "Better care for the forest yields an increased productivity in the long run. Every <b>Forrester</b> gains an increase in productivity of <b>+" + this.rate + " Wood Progress and Stone Progress per second</b>."; },
                 level: 1,
                 maxLevel: 2,
-                rate: 0.1,
+                rate: 0.9,
                 resourceCost: {
                     wood: {
                         base: 10000
@@ -3212,8 +3212,8 @@ function newGame() {
                 description: function () { return "Turn your farms into vastly superior investments. Each <b>Farmer</b> gains an increase in productivity of <b>+" + this.maxRate + " Wheat Progress per second</b>." + (this.level >= this.maxLevel ? " Each <b>Farm Hand</b> also gains an increase of <b>+" + this.rate + " Wheat Progress per second</b>." : ""); },
                 level: 1,
                 maxLevel: 5,
-                maxRate: 0.2,
-                rate: 0.1,
+                maxRate: 1.8,
+                rate: 0.9,
                 resourceCost: {
                     iron: {
                         base: 500
@@ -3256,8 +3256,8 @@ function newGame() {
                 name: "upgDiamondBucket",
                 label: "Diamond Bucket",
                 description: function () { return "The shiniest of all buckets. Increases the amount of <b>Water Progress</b> it takes to gather <b>Water</b> by <b>" + this.maxRate + "</b> and increases the amount of <b>Water</b> you get by <b>" + this.rate + "</b>!"; },
-                maxRate: 60,
-                rate: 10,
+                maxRate: 600,
+                rate: 100,
                 resourceCost: {
                     silver: {
                         base: 100
@@ -3274,8 +3274,8 @@ function newGame() {
                 name: "upgDiamondAxe",
                 label: "Diamond Axe",
                 description: function () { return "The shiniest of all axes. Increases the amount of <b>Wood Progress</b> it takes to gather <b>Wood</b> by <b>" + this.maxRate + "</b> and increases the amount of <b>Wood</b> you get by <b>" + this.rate + "</b>!"; },
-                maxRate: 80,
-                rate: 8,
+                maxRate: 800,
+                rate: 80,
                 resourceCost: {
                     silver: {
                         base: 150
@@ -3293,8 +3293,8 @@ function newGame() {
                 label: "Diamond Pick.",
                 fullLabel: "Diamond Pickaxe",
                 description: function () { return "The shiniest of all pickaxes. Increases the amount of <b>Stone Progress</b> it takes to gather <b>Stone</b> by <b>" + this.maxRate + "</b> and increases the amount of <b>Stone</b> you get by <b>" + this.rate + "</b>!"; },
-                maxRate: 100,
-                rate: 6,
+                maxRate: 1000,
+                rate: 60,
                 resourceCost: {
                     silver: {
                         base: 250
@@ -3312,8 +3312,8 @@ function newGame() {
                 label: "Diamond Pick. II",
                 fullLabel: "Diamond Pickaxe II",
                 description: function () { return "The shiniest of all shiny pickaxes. Increases the amount of <b>Iron Progress</b> it takes to gather <b>Iron</b> by <b>" + this.maxRate + "</b> and increases the amount of <b>Iron</b> you get by <b>" + this.rate + "</b>!"; },
-                maxRate: 350,
-                rate: 9,
+                maxRate: 3500,
+                rate: 90,
                 resourceCost: {
                     silver: {
                         base: 300
@@ -3331,9 +3331,9 @@ function newGame() {
                 label: "Diamond Pick. III",
                 fullLabel: "Diamond Pickaxe III",
                 description: function () { return "The shiniest of all shiniest pickaxes. Increases the amount of <b>Silver Progress</b> it takes to gather <b>Silver</b> by <b>" + this.maxRate + "</b> and increases the amount of <b>Silver</b> you get by <b>" + this.rate + "</b>, as well as the amount of <b>Stone</b> you get by <b>" + this.stoneMax + "</b>!"; },
-                maxRate: 1000,
-                rate: 10,
-                stoneMax: 100,
+                maxRate: 10000,
+                rate: 100,
+                stoneMax: 1000,
                 resourceCost: {
                     silver: {
                         base: 400
@@ -3351,8 +3351,8 @@ function newGame() {
                 label: "Diamond Pick. IV",
                 fullLabel: "Diamond Pickaxe IV",
                 description: function () { return "The ultimate shiny pickaxe. Increases the amount of <b>Diamond Progress</b> it takes to gather <b>Diamond</b> by <b>" + this.maxRate + "</b> and increases the amount of <b>Diamond</b> you get by <b>" + this.rate + "</b>!"; },
-                maxRate: 5000,
-                rate: 100,
+                maxRate: 50000,
+                rate: 1000,
                 resourceCost: {
                     silver: {
                         base: 500
@@ -3369,8 +3369,8 @@ function newGame() {
                 name: "upgDiamondSickle",
                 label: "Diamond Sickle",
                 description: function () { return "The shiniest of all sickles. Increases the amount of <b>Wheat Progress</b> it takes to gather <b>Wheat</b> by <b>" + this.maxRate + "</b> and increases the amount of <b>Wheat</b> you get by <b>" + this.rate + "</b>!"; },
-                maxRate: 5,
-                rate: 4,
+                maxRate: 50,
+                rate: 40,
                 resourceCost: {
                     silver: {
                         base: 200
@@ -3387,8 +3387,8 @@ function newGame() {
                 name: "upgRegiment",
                 label: "Regiment",
                 description: function () { return "Exercise greater control over resource gathering. Reduces the amount of <b>Iron Progress</b> required to gather <b>Iron</b> by <b>" + Math.abs(this.rate) + "</b> and the amount of <b>Silver Progress</b> required to gather <b>Silver</b> by <b>" + Math.abs(this.maxRate) + "</b>."; },
-                maxRate: -100,
-                rate: -30,
+                maxRate: -1000,
+                rate: -300,
                 level: 1,
                 maxLevel: 5,
                 resourceCost: {
@@ -3413,8 +3413,8 @@ function newGame() {
                     if (this.level == this.maxLevel) desc += " Each <b>Jewelry</b> also gains an additional <b>" + this.maxRate + " Silver per second</b>.";
                     return desc;
                 },
-                rate: 1,
-                maxRate: 0.1,
+                rate: 10,
+                maxRate: 1,
                 level: 1,
                 maxLevel: 5,
                 resourceCost: {
@@ -3448,8 +3448,8 @@ function newGame() {
             upgClarity: {
                 name: "upgClarity",
                 label: "Clarity",
-                description: function () { return "Your wisdom grows with each passing moment. Increases your resources gathered when completing a <b>Progress Bar</b> by <b>5%</b>. Also allows you to start building <b>Extractors</b> to pull <b>Diamonds</b> from the earth."; },
-                rate: 0.05,
+                description: function () { return "Your wisdom grows with each passing moment. Increases your resources gathered when completing a <b>Progress Bar</b> by <b>50%</b>. Also allows you to start building <b>Extractors</b> to pull <b>Diamonds</b> from the earth."; },
+                rate: 0.5,
                 resourceCost: {
                     water: {
                         base: 50000
@@ -3466,7 +3466,7 @@ function newGame() {
                 name: "upgMining2",
                 label: "Mining II",
                 description: function () { return "Your mining technology now allows your <b>Miners</b> to gather <b>Diamond</b>! Each miner will start digging for <b>" + this.rate + " Diamond Progress per second</b>."; },
-                rate: 1.5,
+                rate: 3.5,
                 resourceCost: {
                     wood: {
                         base: 50000
@@ -3486,8 +3486,8 @@ function newGame() {
                 name: "upgDiamondStorage",
                 label: "Diamond Storage",
                 description: function () { return "The peak of storage technology. Upgrades the maximum capacity of <b>Silver</b> by <b>+" + this.maxRate + "</b> and <b>Diamond</b> by <b>+" + this.rate + "</b>."; },
-                rate: 250,
-                maxRate: 1500,
+                rate: 2500,
+                maxRate: 15000,
                 level: 1,
                 maxLevel: 6,
                 resourceCost: {
@@ -3510,9 +3510,9 @@ function newGame() {
                 label: "Diamond Stor. II",
                 fullLabel: "Diamond Storage II",
                 description: function () { return "Extend the peak of storage technology to other resources. Upgrades the maximum capacity of <b>Water</b> by <b>+" + prettify(this.waterMax, 0, true) + "</b>, <b>Wood</b> by <b>+" + prettify(this.woodMax, 0, true) + "</b> and <b>Wheat</b> by <b>+" + prettify(this.wheatMax, 0, true) + "</b>."; },
-                waterMax: 50000,
-                woodMax: 10000,
-                wheatMax: 25000,
+                waterMax: 500000,
+                woodMax: 100000,
+                wheatMax: 250000,
                 level: 1,
                 maxLevel: 4,
                 resourceCost: {
@@ -3537,14 +3537,14 @@ function newGame() {
             upgPrestigePoint2: {
                 name: "upgPrestigePoint2",
                 label: "Prestige Point",
-                description: function () { return "Through cunning trade and craftmanship, you reap the rewards of your past hard work. This upgrade grants you <b>1 Prestige Point</b> for your next colony."; },
+                description: function () { return "Through cunning trade and craftmanship, you reap the rewards of your past hard work. This upgrade grants you <b>4 Prestige Point</b> for your next colony."; },
                 resourceCost: {
                     diamond: {
                         base: 1500
                     }
                 },
                 goldCostBase: 5000,
-                effect: function () { addPrestigePoints(1); },
+                effect: function () { addPrestigePoints(4); },
                 locked: true,
                 bought: false
             },
@@ -3577,9 +3577,9 @@ function newGame() {
                         "1 Advancement Point<br />New Research: Mining<br />+" + this.rate + " Wood Progress per second for each Lumberjack</b>";
                 },
                 type: "age",
-                rate: 0.1,
+                rate: 0.2,
                 effect: function () {
-                    advanceAge(this, 1);
+                    advanceAge(this, 2);
                     upgradeWorkerRate("lumberjack", this.rate);
                     unlock("upgMining", "upgWoodCart", "advancements");
                     tutorialMessage("advancements");
@@ -3615,7 +3615,7 @@ function newGame() {
                     }
                 },
                 effect: function () {
-                    advanceAge(this, 1);
+                    advanceAge(this, 2);
                     unlock("iron", "sawmill", "stoneQuarry", "foundry", "upgStoneTap", "upgCasingWater", "upgCasingWood", "upgCasingStone", "upgCasingIron", "upgDeepDigging", "upgMonarchy", "upgVassalism", "upgWaterTap2", "upgWoodTap2", "advMonasticism", "ldrCicero");
                     upgradeWorkerRate("waterFetcher", this.waterRate);
                     upgradeWorkerRate("lumberjack", this.woodRate);
@@ -3662,7 +3662,7 @@ function newGame() {
                     }
                 },
                 effect: function () {
-                    advanceAge(this, 0);
+                    advanceAge(this, 2);
                     unlock("grainMill", "upgWheatTap", "upgCommerce", "upgScarcity", "upgMetalwork", "upgMotivation", "upgStoneStorage", "upgFarmhouses", "upgHarvest", "upgIronBasket", "upgLanterns", "upgWaterTap3", "upgMasonry3", "upgStonework2", "advEcumenism");
                     upgradeMaxValue("waterP", this.waterMax);
                     upgradeMaxValue("woodP", this.woodMax);
@@ -3763,7 +3763,7 @@ function newGame() {
                     }
                 },
                 effect: function () {
-                    advanceAge(this, 1);
+                    advanceAge(this, 2);
                     unlock("trdAdvancementPoint2");
                     achieve("achRebel");
                     buyPassive(getFromText("psvPumpingSystem"));
